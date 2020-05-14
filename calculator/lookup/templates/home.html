@@ -1,9 +1,27 @@
-<h1> Hey, Welcome to Calculator</h1>
+{% extends 'base.html'%}
+{% block content%}
+
 
 <form action="result">
-    <input type="text" name="num1">
     <br>
-    <input type="text" name="num2">
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Value 1:</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm" name="num1">
+    </div>
+
     <br>
-    <input type="submit">
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Value 2:</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm" name="num2">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Primary</button>
 </form>
+
+{% endblock %}
